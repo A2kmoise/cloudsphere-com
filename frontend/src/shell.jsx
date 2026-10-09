@@ -3,7 +3,7 @@ import { hueFrom, initials } from "./api";
 import { useStore } from "./store";
 
 export function Mark() {
-  return <span className="mark">S</span>;
+  return <span className="mark">CS</span>;
 }
 
 export function Media({ name, sku, imageUrl, className = "product-media" }) {

@@ -9,7 +9,7 @@ export function HomePage() {
   const [categoryId, setCategoryId] = useState("");
 
   useEffect(() => {
-    const t = setTimeout(() => refreshCatalog(query).catch(() => {}), 180);
+    const t = setTimeout(() => refreshCatalog(query).catch(() => { }), 180);
     return () => clearTimeout(t);
   }, [query, refreshCatalog]);
 
@@ -24,12 +24,28 @@ export function HomePage() {
     <>
       <section className="hero">
         <div className="wrap">
-          <p className="eyebrow">Rwanda · integer RWF</p>
-          <h1>Shop Cloud Sphere</h1>
-          <p>Cables and accessories for everyday work. Gold members ship free. Buy 5+ of a line for 10% off.</p>
-          <div className="hero-actions">
-            <a className="btn btn-on-hero" href="#catalogue">Browse catalogue</a>
-            <Link className="btn btn-ghost-hero" to="/cart">View cart</Link>
+          <div className="hero-content">
+            <p className="eyebrow">🇷🇼 Rwanda · Integer RWF</p>
+            <h1>Premium Tech Accessories</h1>
+            <p>Discover high-quality cables and accessories designed for modern professionals. Gold members enjoy free shipping, and bulk orders get automatic discounts.</p>
+            <div className="hero-actions">
+              <a className="btn btn-on-hero" href="#catalogue">Explore Products</a>
+              <Link className="btn btn-ghost-hero" to="/cart">View Cart</Link>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-card">
+              <h3>💎 Gold Membership</h3>
+              <p>Free shipping on all orders and exclusive early access to new products.</p>
+            </div>
+            <div className="hero-card">
+              <h3>📦 Fast Delivery</h3>
+              <p>Same-day processing with reliable tracking. Your order ships within 24 hours.</p>
+            </div>
+            <div className="hero-card">
+              <h3>💰 Best Prices</h3>
+              <p>10% off when you buy 5 or more items from the same product line.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -61,7 +77,7 @@ export function HomePage() {
           </div>
           <div className="chips">
             <button type="button" className={`chip ${categoryId === "" ? "active" : ""}`} onClick={() => setCategoryId("")}>
-              All
+              <span>All</span>
             </button>
             {categories.map((c) => (
               <button
@@ -70,7 +86,7 @@ export function HomePage() {
                 className={`chip ${categoryId === c.id ? "active" : ""}`}
                 onClick={() => setCategoryId(c.id)}
               >
-                {c.name}
+                <span>{c.name}</span>
               </button>
             ))}
           </div>
