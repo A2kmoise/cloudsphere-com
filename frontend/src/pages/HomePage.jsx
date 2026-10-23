@@ -25,26 +25,26 @@ export function HomePage() {
       <section className="hero">
         <div className="wrap">
           <div className="hero-content">
-            <p className="eyebrow">🇷🇼 Rwanda · Integer RWF</p>
-            <h1>Premium Tech Accessories</h1>
-            <p>Discover high-quality cables and accessories designed for modern professionals. Gold members enjoy free shipping, and bulk orders get automatic discounts.</p>
+            <p className="eyebrow">🇩🇪 German Engineering · Premium Automobiles</p>
+            <h1>Luxury German Cars</h1>
+            <p>Experience the finest German automotive engineering. From BMW to Porsche, Mercedes-Benz to Audi - discover premium vehicles that combine performance, luxury, and innovation.</p>
             <div className="hero-actions">
-              <a className="btn btn-on-hero" href="#catalogue">Explore Products</a>
-              <Link className="btn btn-ghost-hero" to="/cart">View Cart</Link>
+              <a className="btn btn-on-hero" href="#catalogue">Browse Inventory</a>
+              <Link className="btn btn-ghost-hero" to="/cart">View Selections</Link>
             </div>
           </div>
           <div className="hero-visual">
             <div className="hero-card">
-              <h3>💎 Gold Membership</h3>
-              <p>Free shipping on all orders and exclusive early access to new products.</p>
+              <h3>🏆 Premium Selection</h3>
+              <p>Hand-picked vehicles from Germany's most prestigious manufacturers.</p>
             </div>
             <div className="hero-card">
-              <h3>📦 Fast Delivery</h3>
-              <p>Same-day processing with reliable tracking. Your order ships within 24 hours.</p>
+              <h3>✅ Certified Quality</h3>
+              <p>Every vehicle undergoes rigorous inspection to ensure peak performance.</p>
             </div>
             <div className="hero-card">
-              <h3>💰 Best Prices</h3>
-              <p>10% off when you buy 5 or more items from the same product line.</p>
+              <h3>🔧 Full Service</h3>
+              <p>Complete documentation and after-sales support included with every purchase.</p>
             </div>
           </div>
         </div>
@@ -52,28 +52,28 @@ export function HomePage() {
       <section className="benefits">
         <div className="wrap benefits-grid">
           <div>
-            <strong>Free shipping</strong>
-            <p>Gold members, or baskets of 50,000 RWF and above.</p>
+            <strong>Financing Available</strong>
+            <p>Flexible payment plans for gold members and qualified buyers.</p>
           </div>
           <div>
-            <strong>Bulk discount</strong>
-            <p>10% off any line when you add five or more.</p>
+            <strong>Trade-In Program</strong>
+            <p>Get the best value for your current vehicle towards your new purchase.</p>
           </div>
           <div>
-            <strong>Pay locally</strong>
-            <p>MTN MoMo or card, with prices in whole francs.</p>
+            <strong>Delivery Service</strong>
+            <p>Professional vehicle delivery anywhere in Rwanda.</p>
           </div>
           <div>
-            <strong>Saved lists</strong>
-            <p>Wishlist stays with your account across sessions.</p>
+            <strong>Warranty Included</strong>
+            <p>Comprehensive coverage with all certified pre-owned vehicles.</p>
           </div>
         </div>
       </section>
       <section className="section" id="catalogue">
         <div className="wrap">
           <div className="section-head">
-            <h2>Catalogue</h2>
-            <span className="muted">{visible.length} published items</span>
+            <h2>Vehicle Inventory</h2>
+            <span className="muted">{visible.length} vehicles available</span>
           </div>
           <div className="chips">
             <button type="button" className={`chip ${categoryId === "" ? "active" : ""}`} onClick={() => setCategoryId("")}>
@@ -90,7 +90,7 @@ export function HomePage() {
               </button>
             ))}
           </div>
-          {visible.length === 0 ? <div className="empty">No products match that search.</div> : null}
+          {visible.length === 0 ? <div className="empty">No vehicles match your search.</div> : null}
           <div className="product-grid">
             {visible.map((p) => {
               const inStock = p.stockBadge === "IN_STOCK";
@@ -120,7 +120,7 @@ export function HomePage() {
                         }
                       }}
                     >
-                      Add to cart
+                      Reserve Vehicle
                     </button>
                   </div>
                 </article>
