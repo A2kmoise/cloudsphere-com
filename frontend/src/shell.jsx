@@ -44,7 +44,7 @@ export function Shell() {
         <div className="wrap header-inner">
           <Link className="brand" to="/">
             <Mark />
-            Cloud Sphere
+            German Auto Select
           </Link>
           <form
             className="search"
@@ -61,14 +61,14 @@ export function Shell() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search products, SKUs…"
-              aria-label="Search products"
+              placeholder="Search vehicles, models…"
+              aria-label="Search vehicles"
             />
           </form>
           <nav className="header-actions">
-            <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Shop</NavLink>
-            {user ? <NavLink to="/orders" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Orders</NavLink> : null}
-            {user ? <NavLink to="/wishlist" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Wishlist</NavLink> : null}
+            <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Inventory</NavLink>
+            {user ? <NavLink to="/orders" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Purchases</NavLink> : null}
+            {user ? <NavLink to="/wishlist" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Favorites</NavLink> : null}
             {isAdmin ? <NavLink to="/admin" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>Admin</NavLink> : null}
             <Link to="/cart" className="icon-btn" aria-label="Cart" title="Cart">
               <Icon d="M6 7h15l-1.5 9h-12zM6 7 5 4H2" />
@@ -99,24 +99,24 @@ export function Shell() {
           <div>
             <div className="brand" style={{ marginBottom: 8 }}>
               <Mark />
-              Cloud Sphere
+              German Auto Select
             </div>
-            <p>Demo store for SPEDO501. Catalogue money is integer RWF. No native apps, no live payment rails.</p>
+            <p>Premium German vehicles in Rwanda. All prices in RWF. Financing available for qualified buyers.</p>
           </div>
           <div>
-            <h3>Shop</h3>
-            <Link to="/">Catalogue</Link>
-            <Link to="/cart">Cart</Link>
-            <Link to="/wishlist">Wishlist</Link>
+            <h3>Browse</h3>
+            <Link to="/">Vehicle Inventory</Link>
+            <Link to="/cart">Selected Vehicles</Link>
+            <Link to="/wishlist">Favorites</Link>
           </div>
           <div>
             <h3>Account</h3>
-            {user ? <Link to="/orders">Orders</Link> : <Link to="/login">Sign in</Link>}
+            {user ? <Link to="/orders">My Purchases</Link> : <Link to="/login">Sign in</Link>}
             {user ? <button type="button" className="linkish" onClick={() => { logout(); navigate("/"); }}>Sign out</button> : <Link to="/register">Create account</Link>}
           </div>
           <div>
-            <h3>Fulfilment</h3>
-            <p>Gold members ship free. Standard shipping 2,000 RWF. Promo codes are 5–10 alphanumeric characters.</p>
+            <h3>Services</h3>
+            <p>Professional delivery available. Trade-in programs and financing options for gold members. Contact us for details.</p>
           </div>
         </div>
       </footer>
